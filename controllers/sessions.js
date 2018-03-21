@@ -3,10 +3,12 @@ const router = express.Router();
 const User = require('../models/users.js');
 const bcrypt = require('bcrypt');
 
+// NEW ROUTE
 router.get('/new', (req, res) => {
     res.render('sessions/new.ejs');
 });
 
+// CREATE ROUTE
 router.post('/', (req, res) => {
     User.findOne(
         {username: req.body.username}, (err, foundUser) => {
@@ -18,6 +20,12 @@ router.post('/', (req, res) => {
             }
         }
     );
+});
+
+router.delete('/', (req, res) => {
+    req.session.destroy(() => {
+        res.redirect('/');
+    });
 });
 
 module.exports = router;
