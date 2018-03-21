@@ -21,11 +21,26 @@ app.use(express.json());
 // Static Files
 app.use(express.static('public'));
 
+// INDEX ROUTE
+app.get('/', (req, res) => {
+    res.render('index.ejs');
+});
+
+
+
+
+
+
+
+
+
+
+
 // CONNECTIONS
 app.listen(3000, () => {
     console.log('Trent <3 Aubrey');
 });
-
+// Mongoose
 mongoose.connect('mongodb://localhost:27017/leftright');
 mongoose.connection.once('open', () => {
     console.log('Connected to mongo!');
