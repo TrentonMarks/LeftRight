@@ -6,6 +6,7 @@ const session = require('express-session');
 const methodOverride = require('method-override');
 const bcrypt = require('bcrypt');
 
+
 // MIDDLEWARE
 // Method Override
 app.use(methodOverride('_method'));
@@ -26,6 +27,11 @@ app.get('/', (req, res) => {
     res.render('index.ejs');
 });
 
+
+// CONTROLLERS
+// users
+const usersController = require('./controllers/users.js');
+app.use('/users', usersController);
 
 
 
