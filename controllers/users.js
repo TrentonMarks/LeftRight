@@ -4,7 +4,7 @@ const User = require('../models/users.js');
 const bcrypt = require('bcrypt');
 
 router.get('/new', (req, res) => {
-    res.send('new');
+    res.render('users/new.ejs');
 });
 
 module.exports = router;
