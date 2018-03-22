@@ -22,6 +22,18 @@ router.post('/', (req, res) => {
     );
 });
 
+
+// // EDIT ROUTE
+// router.get('/:id/edit', (req, res) => {
+//
+// });
+//
+// // UPDATE ROUTE
+// router.put('/:id', (req, res) => {
+//
+// });
+
+// DESTROY ROUTE
 router.delete('/', (req, res) => {
     req.session.destroy(() => {
         res.redirect('/');

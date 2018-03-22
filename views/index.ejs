@@ -10,6 +10,9 @@
             <!-- title -->
             <div class="header-title">
                 <h1>Left.Right.</h1>
+                <% if(currentUser) { %>
+                <h4>Hello, <%=currentUser.username%>!</h4>
+                <% } %>
             </div>
             <!-- navigation -->
             <nav>
@@ -18,6 +21,9 @@
                 <a href="/users/new">Register</a>
                 <br>
                 <% if(currentUser) { %>
+                    <form action="/sessions/:id/edit" method="GET">
+                        <input type="submit" value="Edit Profile">
+                    </form>
                     <form action="/sessions?_method=DELETE" method="POST">
                         <input type="submit" value="Logout">
                     </form>
@@ -25,7 +31,7 @@
                     <form action="/sessions/new" method="GET">
                         <input type="submit" value="Log In">
                     </form>
-                <% } %>    
+                <% } %>
             </nav>
         </header>
     </body>
