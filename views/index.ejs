@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <link rel="stylesheet" href="/css/style.css">
         <meta charset="utf-8">
         <title>Left.Right.</title>
     </head>
     <body>
-<!-- ====== TOP HEADER BAR ====== -->
-        <header>
-            <!-- title -->
-            <div class="header-title">
-                <h1>Left.Right.</h1>
-                <% if(currentUser) { %>
-                <h4>Hello, <%=currentUser.username%>!</h4>
-                <% } %>
-            </div>
-            <!-- navigation -->
-            <nav>
-                <a href="/">Home</a>
-                <br>
-                <a href="/users/new">Register</a>
-                <br>
-                <% if(currentUser) { %>
-                    <form action="/sessions/:id/edit" method="GET">
+        <!-- Header Block with Title -->
+        <div class="header">
+            <h1>Left.Right.</h1>
+        </div>
+        <!-- Nav Bar for Logged In Users -->
+        <% if(currentUser) { %>
+                <!-- Full Length of Nav Bar -->
+                <div class="user-nav">
+                    <!-- Home Button -->
+                    <form action="/" method="GET">
+                        <input type="submit" value="Home">
+                    </form>
+                    <!-- 'Edit Profile' Button -->
+                    <form action="/sessions/edit" method="POST">
                         <input type="submit" value="Edit Profile">
                     </form>
+                    <!-- Logout Button -->
                     <form action="/sessions?_method=DELETE" method="POST">
                         <input type="submit" value="Logout">
                     </form>
-                <% } else { %>
+                </div>
+        <!-- Nav Bar for Users NOT Logged In -->
+        <% } else { %>
+                <!-- Full Length of Nav Bar -->
+                <div class="nonuser-nav">
+                    <!-- Home Button -->
+                    <form action="/" method="GET">
+                        <input type="submit" value="Home">
+                    </form>
+                    <!-- 'Create Account' Button -->
+                    <form action="/users/new" method="GET">
+                        <input type="submit" value="Create Account">
+                    </form>
+                    <!-- 'Log In' Button -->
                     <form action="/sessions/new" method="GET">
                         <input type="submit" value="Log In">
                     </form>
-                <% } %>
-            </nav>
-        </header>
+                </div>
+        <% } %>
     </body>
 </html>

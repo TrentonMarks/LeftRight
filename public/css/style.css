@@ -1,0 +1,16 @@
+
+body {
+    background-repeat: no-repeat;
+    background-color: lightgray;
+    margin: 0;
+}
+
+.header {
+    height: 75px;
+    width: 100%;
+    background-color: gray;
+}
+
+h1 {
+    margin: auto;
+}

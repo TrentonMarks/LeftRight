@@ -22,15 +22,18 @@ router.post('/', (req, res) => {
     );
 });
 
-
 // // EDIT ROUTE
-// router.get('/:id/edit', (req, res) => {
-//
+// router.get('/edit', (req, res) => {
+//     User.find({}, (err, foundUser) => {
+//         res.render('sessions/edit.ejs', {username: req.body.username});
+//     });
 // });
-//
-// // UPDATE ROUTE
-// router.put('/:id', (req, res) => {
-//
+
+// UPDATE ROUTE
+// router.put('/', (req, res) => {
+//     User.findByIdAndSave({}, req.body.username, {new:true}, (err, updatedModel) => {
+//         res.redirect('/');
+//     });
 // });
 
 // DESTROY ROUTE
