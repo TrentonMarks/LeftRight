@@ -40,11 +40,14 @@ app.use('/sessions', sessionsController);
 
 
 // CONNECTIONS
-app.listen(3000, () => {
-    console.log('Trent <3 Aubrey');
-});
 // Mongoose
-mongoose.connect('mongodb://localhost:27017/leftright');
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/leftright';
+mongoose.connect(mongoURI);
 mongoose.connection.once('open', () => {
     console.log('Connected to mongo!');
+});
+// Heroku Port / Port 3000
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log('Trent <3 Aubrey');
 });
