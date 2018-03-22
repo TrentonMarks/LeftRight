@@ -41,7 +41,7 @@ app.use('/sessions', sessionsController);
 
 // CONNECTIONS
 // Mongoose
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/leftright';
+const mongoURI = process.env.PORT || 'mongodb://localhost:27017/leftright';
 mongoose.connect(mongoURI);
 mongoose.connection.once('open', () => {
     console.log('Connected to mongo!');
