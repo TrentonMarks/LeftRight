@@ -1,17 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('../models/posts.js');
+const User = require('../models/users.js');
 
 // NEW ROUTE TO CREATE A POST
 router.get('/new', (req, res) => {
     res.render('posts/new.ejs');
 });
 
-// CREATE ROUTE TO CREATE NEW POST (NOT PUSHING DATA TO DB)
-router.post('/posts', (req, res) => {
-    Post.create(req.body, (err, newPost) => {
-        res.send('POSTTTTT');
-    });
+// CREATE ROUTE TO CREATE NEW POST
+router.post('/', (req, res) => {
+    User.findOneAndUpdate(
+        {_id: req.session.currentUser._id},
+        {$push: {img: req.body.img}},
+        (err, foundUser) => {
+            res.redirect('/');
+        }
+    );
 });
+
 
 module.exports = router;
