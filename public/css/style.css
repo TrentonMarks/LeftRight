@@ -1,16 +1,52 @@
 
 body {
-    background-repeat: no-repeat;
-    background-color: lightgray;
     margin: 0;
+    background-color: rgb(225, 225, 225);
+
 }
 
 .header {
-    height: 75px;
+    height: 100px;
     width: 100%;
-    background-color: gray;
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: 'Cinzel', sans-serif;
 }
 
 h1 {
     margin: auto;
+    padding: 25px;
+    font-size: 40px;
+}
+
+.footer {
+    bottom: 0;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    color: white;
+    text-align: right;
+}
+
+.footer-text {
+    margin-right: 25px;
+    margin-top: 65px;
+    font-family: 'Cinzel', sans-serif;
+}
+
+.nonuser-nav {
+    width: 200px;
+    background-color: rgb(200, 200, 200);
+    height: 800px;
+}
+
+input[value="Home"], [value="Create Account"], [value="Log In"] {
+    width: 200px;
+    height: 75px;
+    background-color: rgb(200, 200, 200);
+}
+
+input[value="Home"]:hover, [value="Create Account"]:hover, [value="Log In"]:hover {
+    background-color: rgb(175, 175, 175);
 }

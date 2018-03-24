@@ -7,10 +7,10 @@ router.get('/new', (req, res) => {
     res.render('posts/new.ejs');
 });
 
-// CREATE ROUTE TO CREATE NEW POST
-router.post('/', (req, res) => {
-    Post.create(req.body, (err, product) => {
-        res.redirect('/');
+// CREATE ROUTE TO CREATE NEW POST (NOT PUSHING DATA TO DB)
+router.post('/posts', (req, res) => {
+    Post.create(req.body, (err, newPost) => {
+        res.send('POSTTTTT');
     });
 });
 
