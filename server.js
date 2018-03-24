@@ -31,6 +31,8 @@ app.get('/', (req, res) => {
 
 
 // CONTROLLERS
+// Posts
+
 // Users
 const usersController = require('./controllers/users.js');
 app.use('/users', usersController);

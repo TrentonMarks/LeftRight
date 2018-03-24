@@ -6,10 +6,14 @@
     </head>
     <body>
         <h1>Edit Profile</h1>
-        <form action="/sessions/<%=username%>?_method=PUT" method="POST">
+        <form action="/users/<%=username.id%>?_method=PUT" method="POST">
             <input type="text" name="username" placeholder="New Username">
             <br>
             <input type="submit" value="Update">
+        </form>
+        <br><br><br><br>
+        <form action="/users/<%=username.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete Account">
         </form>
     </body>
 </html>
