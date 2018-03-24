@@ -39,6 +39,8 @@ app.use('/users', usersController);
 // Sessions
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
+const postsController = require('./controllers/posts.js');
+app.use('/posts', postsController);
 
 
 // CONNECTIONS
