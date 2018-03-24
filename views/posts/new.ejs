@@ -7,9 +7,9 @@
         <title>Left.Right.</title>
     </head>
     <body>
-        <div class="header">
-            <h1>Left.Right.</h1>
-        </div>
+        <!-- Header Block with Title -->
+        <% include ../partials/header.ejs %>
+
         <div class="container">
             <form action="/posts" method="POST">
                 <h1>Create A Post</h1>
@@ -22,8 +22,8 @@
                 <input type="submit" value="Post">
             </form>
         </div>
-        <div class="footer">
-            <p class="footer-text">Trenton Marks</p>
-        </div>
+        
+        <!-- Footer Block with Text -->
+        <% include ../partials/footer.ejs %>
     </body>
 </html>
