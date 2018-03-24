@@ -1,5 +1,6 @@
 
 body {
+    background-image: url(http://cdn.ghostly.com/images/wallpapers/Gilmore_Wallpaper_3.jpg);
     margin: 0;
     background-color: rgb(225, 225, 225);
 
@@ -38,13 +39,15 @@ h1 {
 .nonuser-nav {
     width: 200px;
     background-color: rgb(250, 250, 250);
-    height: 800px;
+    height: 100vh;
+    font-family: 'Cinzel', sans-serif;
 }
 
 .user-nav {
     width: 200px;
-    height: 800px;
+    height: 100vh;
     background-color: rgb(250, 250, 250);
+    font-family: 'Cinzel', sans-serif;
 }
 
 input[value="Home"], [value="Create Account"], [id="log-in-redirect"], [value="Create Post"], [value="Edit Profile"], [value="Logout"] {
@@ -52,6 +55,7 @@ input[value="Home"], [value="Create Account"], [id="log-in-redirect"], [value="C
     height: 75px;
     background-color: rgb(250, 250, 250);
     border: none;
+    font-family: 'Cinzel', sans-serif;
 }
 
 input[value="Home"]:hover, [value="Create Account"]:hover, [id="log-in-redirect"]:hover, [value="Create Post"]:hover, [value="Edit Profile"]:hover, [value="Logout"]:hover, [value="Create User"]:hover, [value="Post"]:hover {
@@ -61,10 +65,12 @@ input[value="Home"]:hover, [value="Create Account"]:hover, [id="log-in-redirect"
 form[action="/users"], [action="/sessions"], [action="/posts"], [class="edit-profile"] {
     height: 500px;
     width: 500px;
+    background-color: white;
     border: 1px solid black;
-    margin-left: 50px;
-    margin-top: 50px;
+    margin: auto;
+    margin-top: 100px;
     padding: 25px;
+    font-family: 'Cinzel', sans-serif;
 }
 
 input[type="text"], [type="password"] {
@@ -72,6 +78,7 @@ input[type="text"], [type="password"] {
     height: 20px;
     width: 400px;
     border-radius: 5px;
+    font-family: 'Cinzel', sans-serif;
 }
 
 input[value="Create User"], [id="log-in-submit"], [value="Post"], [value="Update"], [value="Delete Account"] {
@@ -81,4 +88,5 @@ input[value="Create User"], [id="log-in-submit"], [value="Post"], [value="Update
     width: 100px;
     border-radius: 5px;
     box-shadow: 2px 2px gray;
+    font-family: 'Cinzel', sans-serif;
 }
