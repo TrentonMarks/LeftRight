@@ -1,3 +1,4 @@
+<!-- EDIT PROFILE PAGE -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -7,8 +8,11 @@
         <title>Left.Right.</title>
     </head>
     <body>
+
         <!-- Header Block with Title -->
         <% include ../partials/header.ejs %>
+
+        <!-- Form that allows user to edit their profile -->
         <div class="edit-profile-form">
             <form action="/users?_method=PUT" method="POST">
                 <h1>Edit Profile</h1>
@@ -21,7 +25,9 @@
                 <input type="submit" value="Delete Account">
             </form>
         </div>
+
         <!-- Footer Block with Text -->
         <% include ../partials/footer.ejs %>
+        
     </body>
 </html>

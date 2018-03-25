@@ -7,7 +7,6 @@ const methodOverride = require('method-override');
 const bcrypt = require('bcrypt');
 
 
-
 // MIDDLEWARE
 // Method Override
 app.use(methodOverride('_method'));
@@ -25,6 +24,7 @@ app.use(session({
 
 
 // INDEX ROUTE
+// Renders the homepage of the app
 app.get('/', (req, res) => {
     res.render('index.ejs', {currentUser: req.session.currentUser});
 });

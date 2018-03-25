@@ -6,11 +6,13 @@ const methodOverride = require('method-override');
 
 
 // NEW ROUTE
+// Route to page with form that allows user to create a new username and password
 router.get('/new', (req, res) => {
     res.render('users/new.ejs');
 });
 
 // CREATE ROUTE
+// Adds new username and a crypted password to the db once user 'submits' form
 router.post('/', (req, res) => {
     req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
     User.create(req.body, (err, createdUser) => {
@@ -29,6 +31,7 @@ router.delete('/', (req, res,) => {
 });
 
 // EDIT ROUTE
+// Allows user to edit their username
 router.get('/:id/edit', (req, res) => {
     User.find(req.session.currentUser, (err, foundUser) => {
         res.render('users/edit.ejs', {
@@ -38,6 +41,7 @@ router.get('/:id/edit', (req, res) => {
 });
 
 // UPDATE ROUTE
+// Allows user to edit their username
 router.put('/', (req, res) => {
     User.findOneAndUpdate(
         req.session.currentUser.username,

@@ -1,3 +1,4 @@
+<!-- NEW POST PAGE -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -7,9 +8,11 @@
         <title>Left.Right.</title>
     </head>
     <body>
+
         <!-- Header Block with Title -->
         <% include ../partials/header.ejs %>
 
+        <!-- Form that allows user to submit an image to post -->
         <div class="container">
             <form action="/posts" method="POST">
                 <h1>Create A Post</h1>
@@ -21,5 +24,6 @@
 
         <!-- Footer Block with Text -->
         <% include ../partials/footer.ejs %>
+        
     </body>
 </html>
