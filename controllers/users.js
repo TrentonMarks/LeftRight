@@ -19,10 +19,13 @@ router.post('/', (req, res) => {
 });
 
 // DELETE ROUTE
-router.delete('/:id', (req, res,) => {
-    User.findByIdAndRemove(req.params.id, (err, data) => {
-        res.redirect('/');
-    })
+// When user clicks on 'Delete Account' in 'Edit Profile' form, this route deletes the user's account and logs out
+router.delete('/', (req, res,) => {
+    User.findOneAndRemove(req.session.currentUser, (err, data) => {
+        req.session.destroy(()=>{
+            res.redirect('/');
+        });
+    });
 });
 
 // EDIT ROUTE

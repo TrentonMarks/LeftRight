@@ -70,7 +70,7 @@ input[value="Home"]:hover, [value="Create Account"]:hover, [id="log-in-redirect"
 
 }
 
-form[action="/users"], [action="/sessions"], [action="/posts"], [class="edit-profile"] {
+form[action="/users"], [action="/sessions"], [action="/posts"], [class="edit-profile-form"] {
     height: auto;
     width: 500px;
     background-color: white;
