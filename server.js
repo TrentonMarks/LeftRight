@@ -31,14 +31,13 @@ app.get('/', (req, res) => {
 
 
 // CONTROLLERS
-// Posts
-
 // Users
 const usersController = require('./controllers/users.js');
 app.use('/users', usersController);
 // Sessions
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
+// Posts
 const postsController = require('./controllers/posts.js');
 app.use('/posts', postsController);
 

@@ -30,22 +30,22 @@ router.delete('/', (req, res,) => {
 
 // EDIT ROUTE
 router.get('/:id/edit', (req, res) => {
-    User.find(req.body.username, (err, foundUser) => {
+    User.find(req.session.currentUser, (err, foundUser) => {
         res.render('users/edit.ejs', {
-            username: foundUser
+            foundUser: foundUser
         });
     });
 });
 
 // UPDATE ROUTE
 router.put('/', (req, res) => {
-    User.findOneAndUpdate({_id: req.session.currentUser._id},
-        {$push: {username: req.body.username}},
+    User.findOneAndUpdate(
+        req.session.currentUser.username,
+        req.body,
         {new: true},
         (err, updatedModel) => {
             res.redirect('/');
         });
     });
-
 
 module.exports = router;

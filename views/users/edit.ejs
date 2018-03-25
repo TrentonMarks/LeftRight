@@ -10,7 +10,7 @@
         <!-- Header Block with Title -->
         <% include ../partials/header.ejs %>
         <div class="edit-profile-form">
-            <form action="/users/<%=username._id%>?_method=PUT" method="POST">
+            <form action="/users?_method=PUT" method="POST">
                 <h1>Edit Profile</h1>
                 <input type="text" name="username" placeholder="New Username">
                 <br>
