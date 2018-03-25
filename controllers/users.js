@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/users.js');
 const bcrypt = require('bcrypt');
+const methodOverride = require('method-override');
+
 
 // NEW ROUTE
 router.get('/new', (req, res) => {
@@ -15,8 +17,6 @@ router.post('/', (req, res) => {
         res.redirect('/');
     });
 });
-
-
 
 // DELETE ROUTE
 router.delete('/:id', (req, res,) => {
@@ -33,14 +33,16 @@ router.get('/:id/edit', (req, res) => {
         });
     });
 });
-//
-// // UPDATE ROUTE
-// router.put('/', (req, res) => {
-//     User.findByIdAndSave({}, req.body.username, {new:true}, (err, updatedModel) => {
-//         res.redirect('/');
-//     });
-// });
 
+// UPDATE ROUTE
+router.put('/', (req, res) => {
+    User.findOneAndUpdate({_id: req.session.currentUser._id},
+        {$push: {username: req.body.username}},
+        {new: true},
+        (err, updatedModel) => {
+            res.redirect('/');
+        });
+    });
 
 
 module.exports = router;

@@ -10,7 +10,7 @@
         <!-- Header Block with Title -->
         <% include ../partials/header.ejs %>
 
-        <form class="edit-profile" action="/users/<%=username.id%>?_method=PUT" method="POST">
+        <form class="edit-profile" action="/users/<%=username._id%>?_method=PUT" method="POST">
             <h1>Edit Profile</h1>
             <input type="text" name="username" placeholder="New Username">
             <br>
@@ -20,7 +20,7 @@
                 <input type="submit" value="Delete Account">
             </form>
         </form>
-        
+
         <!-- Footer Block with Text -->
         <% include ../partials/footer.ejs %>
     </body>

@@ -12,13 +12,7 @@ const userSchema = Schema({
         required: true,
         unique: true
     },
-    name: {
-        type: String,
-    },
-    img: {
-        type: String,
-    },
-    description: String
+    img: String
 });
 
 const User = mongoose.model('User', userSchema);
