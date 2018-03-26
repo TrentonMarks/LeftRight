@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const methodOverride = require('method-override');
 const bcrypt = require('bcrypt');
+const User = require('./models/users.js');
+
 
 
 // MIDDLEWARE
@@ -26,7 +28,12 @@ app.use(session({
 // INDEX ROUTE
 // Renders the homepage of the app
 app.get('/', (req, res) => {
-    res.render('index.ejs', {currentUser: req.session.currentUser});
+    User.find( (err, users) => {
+        const img = users.reduce((result, user)=>{
+            return result.concat(user.img)
+        }, []);
+        res.render('index.ejs', {currentUser: req.session.currentUser, images: img});
+    });
 });
 
 

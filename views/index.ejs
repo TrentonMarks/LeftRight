@@ -7,15 +7,21 @@
         <title>Left.Right.</title>
     </head>
     <body>
-        
+
         <!-- Header Block with Title -->
         <% include ./partials/header.ejs %>
 
-        <!-- Navigation Bar -->
-        <% include ./partials/nav_bar.ejs %>
+        <div class="body">
+            <!-- Navigation Bar -->
+            <% include ./partials/nav_bar.ejs %>
 
-        <!-- Displays all Posts -->
-
+            <!-- Displays all Posts -->
+            <div class="posts-container">
+                <% for (let i = 0; i < images.length; i++) { %>
+                    <img src="<%- images[i] %>" alt="">
+                <% } %>
+            </div>
+        </div>
 
         <!-- Footer Block with Text -->
         <% include ./partials/footer.ejs %>
