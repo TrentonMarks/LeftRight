@@ -30,7 +30,7 @@ app.use(session({
 app.get('/', (req, res) => {
     User.find( (err, users) => {
         const img = users.reduce((result, user)=>{
-            return result.concat(user.img)
+            return result.concat(user.img);
         }, []);
         res.render('index.ejs', {currentUser: req.session.currentUser, images: img});
     });

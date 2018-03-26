@@ -18,7 +18,10 @@
             <!-- Displays all Posts -->
             <div class="posts-container">
                 <% for (let i = 0; i < images.length; i++) { %>
-                    <img src="<%- images[i] %>" alt="">
+                    <div class="post">
+                        <img src="<%- images[i] %>" alt="">    
+                    </div>
+
                 <% } %>
             </div>
         </div>
