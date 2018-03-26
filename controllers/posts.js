@@ -20,4 +20,14 @@ router.post('/', (req, res) => {
     );
 });
 
+// SHOW ROUTE
+// Route to show page when a user clicks on a post
+router.get('/', (req, res) => {
+    User.findById(req.params.id, (err, post) => {
+        res.render('posts/show.ejs',
+            {currentUser: req.session.currentUser,
+             post: post});
+    });
+});
+
 module.exports = router;

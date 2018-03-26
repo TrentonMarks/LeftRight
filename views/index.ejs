@@ -19,9 +19,8 @@
             <div class="posts-container">
                 <% for (let i = 0; i < images.length; i++) { %>
                     <div class="post">
-                        <img src="<%- images[i] %>" alt="">    
+                        <a href="/posts"><img src="<%= images[i] %>" alt=""></a>
                     </div>
-
                 <% } %>
             </div>
         </div>
