@@ -143,3 +143,8 @@ input[value="Create User"]:hover, [id="log-in-submit"]:hover, [value="Post"]:hov
     width: 100%;
     height: auto;
 }
+
+.show-page-header {
+    color: white;
+    font-family: 'Cinzel', sans-serif;
+}

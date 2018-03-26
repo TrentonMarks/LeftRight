@@ -5,7 +5,7 @@ App Name: Left.Right.
 
 DESCRIPTION:
 
-An CRUD application with MVC file structure that utilized all 7 routes as well as node.js, express, and mongoose.  The app currently allows users to view pictures that users have posted to the homepage as well as creating a username and crypted password which then allows them to post photos to the homepage as well.  
+An CRUD application with MVC file structure that utilized all 7 routes as well as node.js, express, and mongoose.  The app currently allows users to view pictures that users have posted to the homepage as well as creating a username and encrypted password which then allows them to post photos to the homepage as well.  
 
 
 PURPOSE:
@@ -18,6 +18,7 @@ IMPROVEMENTS:
 1) The div containers that surround the posted images need to size correctly/uniformly.
 
 2) Adding more features:
+          -- Style Show Page and get photo to appear
           -- Edit/Update passwords and posts
           -- Deleting posts
           -- Adding an 'Account' tab that allows users to view their personal posts
