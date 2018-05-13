@@ -1,6 +1,6 @@
 Project 2 -- Trenton Marks
 Date: 3/25/18
-App Name: Left.Right.
+App Name: Left.Right. 
 
 
 DESCRIPTION:
