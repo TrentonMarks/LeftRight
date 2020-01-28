@@ -5,12 +5,12 @@ App Name: Left.Right.
 
 DESCRIPTION:
 
-An CRUD application with MVC file structure that utilized all 7 routes as well as node.js, express, and mongoose.  The app currently allows users to view pictures that users have posted to the homepage as well as creating a username and encrypted password which then allows them to post photos to the homepage as well.  
+A full CRUD application with MVC file structure that utilizes all 7 RESTful routes as well as node.js, express, and MongoDB/Mongoose. The app currently allows users to view pictures that users have posted to the homepage as well as creating a username and encrypted password which then allows them to post photos to the homepage as well.  
 
 
 PURPOSE:
 
-The app is for users that are the perfectionist type that enjoy viewing oddly satisfying photos.  The app will eventually allow users to 'like' or 'favorite' posted images. The idea is that when users leave the site they will be left feeling oddly satisfied, or "Left.Right.".
+The app is for people who enjoy viewing oddly satisfying photos. The app will eventually allow users to 'like' or 'favorite' posted images. The idea is that when users leave the site they will be left feeling oddly satisfied, or "Left.Right.".
 
 
 IMPROVEMENTS:
